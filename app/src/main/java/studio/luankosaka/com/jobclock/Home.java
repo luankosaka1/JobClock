@@ -1,26 +1,26 @@
 package studio.luankosaka.com.jobclock;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
-public class Main extends Activity {
+public class Home extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 
@@ -33,12 +33,10 @@ public class Main extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void login(View v) {
-        EditText inputUsername = (EditText) findViewById(R.id.inputUsername);
-        EditText inputPassword = (EditText) findViewById(R.id.inputPassword);
-        String username = inputUsername.getText().toString();
-        String password = inputPassword.getText().toString();
+    public void checkPointer(View v) {
+        ImageView pointer = (ImageView) findViewById(R.id.imagePointer);
 
-        startActivity(new Intent(this, Home.class));
+        pointer.setImageResource(R.drawable.one_finger_click_512);
+        //pointer.setImageResource(R.drawable.one_finger_double_tap_512);
     }
 }
