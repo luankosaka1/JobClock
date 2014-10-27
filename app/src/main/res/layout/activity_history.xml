@@ -30,7 +30,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <TextView
+            <Button
+                android:background="#D1E9E7"
+                android:padding="5dp"
+                android:onClick="clickInfo"
                 android:id="@+id/btn_now"
                 android:text="Hoje"
                 android:gravity="center"
@@ -38,15 +41,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent" />
 
-            <TextView
-                android:id="@+id/btn_week"
-                android:text="Semanal"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent" />
-
-            <TextView
+            <Button
+                android:background="#D1E9E7"
+                android:padding="5dp"
+                android:onClick="clickInfo"
                 android:id="@+id/btn_month"
                 android:text="Mensal"
                 android:gravity="center"
