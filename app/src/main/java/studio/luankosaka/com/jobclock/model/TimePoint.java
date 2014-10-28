@@ -22,6 +22,16 @@ public class TimePoint {
         this.context = context;
     }
 
+    public Cursor getListMonth() {
+        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String now = date.format(new Date());
+        helper = new DatabaseHelper(context);
+        SQLiteDatabase db = helper.getReadableDatabase();
+
+        return db.rawQuery("SELECT time_point FROM work", null);
+
+    }
+
     public Cursor getNow() {
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String now = date.format(new Date());

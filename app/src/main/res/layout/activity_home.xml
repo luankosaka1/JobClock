@@ -51,6 +51,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent" />
 
+            <Button
+                android:background="#D1E9E7"
+                android:padding="5dp"
+                android:onClick="clickInfo"
+                android:id="@+id/btn_listMonth"
+                android:text="Lista Mensal"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+
         </LinearLayout>
 
         <TextClock

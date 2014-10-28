@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="studio.luankosaka.com.jobclock.History">
+        tools:context="studio.luankosaka.com.jobclock.ListMonth">
 
         <LinearLayout
             android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -29,28 +29,6 @@
                 android:src="@drawable/clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
-            <Button
-                android:background="#D1E9E7"
-                android:padding="5dp"
-                android:onClick="clickInfo"
-                android:id="@+id/btn_now"
-                android:text="Hoje"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent" />
-
-            <Button
-                android:background="#D1E9E7"
-                android:padding="5dp"
-                android:onClick="clickInfo"
-                android:id="@+id/btn_month"
-                android:text="Mensal"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent" />
 
             <Button
                 android:background="#D1E9E7"

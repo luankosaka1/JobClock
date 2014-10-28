@@ -19,13 +19,18 @@
         </activity>
         <activity
             android:name=".Home"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:label="@string/title_activity_home" >
+            android:label="@string/title_activity_home"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="studio.luankosaka.com.jobclock.History"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:label="@string/title_activity_history" >
+            android:name=".History"
+            android:label="@string/title_activity_history"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".ListMonth"
+            android:label="@string/title_activity_list_month"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>
 

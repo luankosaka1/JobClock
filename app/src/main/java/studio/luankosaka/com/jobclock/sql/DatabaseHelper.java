@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE = "job_clock";
-    private static int VERSION = 1;
+    private static int VERSION = 2;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE, null, VERSION);
@@ -15,13 +15,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("DROP TABLE IF EXISTS work;");
+        db.execSQL("DROP TABLE IF EXISTS user;");
+
         db.execSQL("CREATE TABLE user (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "username TEXT, " +
                 "password TEXT, " +
                 "name TEXT, " +
                 "workday TIME);");
 
-        db.execSQL("INSERT INTO user (username, password, name, workday) VALUES('luan', 'luan', 'Luan', '08:00:00');");
+        db.execSQL("INSERT INTO user (username, password, name, workday) VALUES('admin', 'admin', 'admin', '08:00:00');");
 
         db.execSQL("CREATE TABLE work (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "user_id INTEGER, " +
@@ -31,6 +34,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS work;");
+        db.execSQL("DROP TABLE IF EXISTS user;");
+        onCreate(db);
     }
+
+
 }

@@ -58,7 +58,8 @@
             android:id="@+id/inputUsername"
             android:layout_below="@+id/labelUsername"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="admin" />
 
         <TextView
             android:text="Senha"
@@ -73,7 +74,8 @@
             android:layout_below="@+id/labelPassword"
             android:inputType="textPassword"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="admin" />
 
         <Button
             android:onClick="login"

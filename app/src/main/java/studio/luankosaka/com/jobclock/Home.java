@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import studio.luankosaka.com.jobclock.action.JobCalculator;
 import studio.luankosaka.com.jobclock.sql.DatabaseHelper;
 
 
@@ -36,6 +37,21 @@ public class Home extends Activity {
         helper = new DatabaseHelper(this);
     }
 
+    public void clickInfo(View view) {
+        JobCalculator calculator = new JobCalculator(this);
+
+        switch (view.getId()) {
+            case R.id.btn_now :
+                calculator.showTimeNow();
+                break;
+            case R.id.btn_month :
+                calculator.showTimeMonth();
+                break;
+            case R.id.btn_listMonth :
+                startActivity(new Intent(this, ListMonth.class));
+                break;
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,5 +95,13 @@ public class Home extends Activity {
         }
 
         db.close();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        ImageView pointer = (ImageView) findViewById(R.id.imagePointer);
+        pointer.setImageResource(R.drawable.one_finger_double_tap_512);
     }
 }
