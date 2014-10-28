@@ -15,8 +15,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        /*
         db.execSQL("DROP TABLE IF EXISTS work;");
         db.execSQL("DROP TABLE IF EXISTS user;");
+        */
 
         db.execSQL("CREATE TABLE user (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "username TEXT, " +
@@ -34,9 +36,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        /*
         db.execSQL("DROP TABLE IF EXISTS work;");
         db.execSQL("DROP TABLE IF EXISTS user;");
         onCreate(db);
+        */
     }
 
 
