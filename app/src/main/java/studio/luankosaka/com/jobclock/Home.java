@@ -41,11 +41,8 @@ public class Home extends Activity {
         JobCalculator calculator = new JobCalculator(this);
 
         switch (view.getId()) {
-            case R.id.btn_now :
-                calculator.showTimeNow();
-                break;
-            case R.id.btn_month :
-                calculator.showTimeMonth();
+            case R.id.btn_day :
+                startActivity(new Intent(this, History.class));
                 break;
             case R.id.btn_listMonth :
                 startActivity(new Intent(this, ListMonth.class));

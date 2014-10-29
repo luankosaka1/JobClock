@@ -28,24 +28,12 @@
                 android:src="@drawable/clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
             <Button
                 android:background="#D1E9E7"
                 android:padding="5dp"
                 android:onClick="clickInfo"
-                android:id="@+id/btn_now"
-                android:text="Hoje"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent" />
-
-            <Button
-                android:background="#D1E9E7"
-                android:padding="5dp"
-                android:onClick="clickInfo"
-                android:id="@+id/btn_month"
-                android:text="Mensal"
+                android:id="@+id/btn_day"
+                android:text="Registro Diária"
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
@@ -56,7 +44,7 @@
                 android:padding="5dp"
                 android:onClick="clickInfo"
                 android:id="@+id/btn_listMonth"
-                android:text="Lista Mensal"
+                android:text="Registro Mensal"
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"

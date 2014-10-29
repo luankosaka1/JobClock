@@ -43,6 +43,9 @@ public class Main extends Activity {
     }
 
     public void login(View v) {
+        startActivity(new Intent(this, Home.class));
+
+        /*
         EditText inputUsername = (EditText) findViewById(R.id.inputUsername);
         EditText inputPassword = (EditText) findViewById(R.id.inputPassword);
         String username = inputUsername.getText().toString();
@@ -63,5 +66,6 @@ public class Main extends Activity {
                 Toast.makeText(this, "Usuario ou senha incorreta.", Toast.LENGTH_SHORT).show();
             }
         }
+        */
     }
 }
